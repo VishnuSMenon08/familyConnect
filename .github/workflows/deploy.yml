@@ -12,6 +12,8 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages      # <-- required by the action
     steps:
       - uses: actions/checkout@v4
 
@@ -34,3 +36,4 @@ jobs:
 
       - name: Deploy
         uses: actions/deploy-pages@v4
+
