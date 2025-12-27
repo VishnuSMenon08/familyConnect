@@ -1,0 +1,195 @@
+/* General styling */
+body, html {
+  margin: 0 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F2F2F2 !important; /* off-white */
+  color: #333;
+  line-height: 1.4 !important;
+  display: block;
+}
+
+
+.header {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+/* GLASS NAVBAR */
+.glass-nav {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 60px);
+    /* width : 100%; */
+    max-width: 1100px;
+    padding: 14px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+
+    border-radius: 4px;
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
+/* BRAND CONTAINER */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* LOGO IMAGE */
+.nav-logo {
+    height: 5vh;          /* ideal for navbar */
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* OPTIONAL: MAKE LOGO SLIGHTLY TRANSLUCENT */
+.nav-logo {
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
+/* LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* UNDERLINE HOVER EFFECT */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* BACKGROUND LAYERS */
+.bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    opacity: 0;
+    animation: fade 18s infinite;
+}
+
+/* INDIVIDUAL IMAGES */
+.bg1 {
+    background-image: url("../public/images/church.webp");
+    animation-delay: 0s;
+}
+
+.bg2 {
+    background-image: url("../public/images/home1.jpg");
+    animation-delay: 6s;
+}
+
+.bg3 {
+    background-image: url("../public/images/home2.jpg");
+    animation-delay: 12s;
+}
+
+/* FADE ANIMATION */
+@keyframes fade {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* DARK OVERLAY */
+.header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+
+/* HEADER TEXT */
+.header-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4a5d73;
+    color: white;
+    margin-top: 40px;
+}
