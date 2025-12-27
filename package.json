@@ -1,4 +1,8 @@
-{
+{ 
+  "name": "familyconnect",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "dependencies": {
     "vite": "^7.3.0"
   },
